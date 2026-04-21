@@ -9,7 +9,7 @@ class IdentifyFaceUseCase(
     private val faceRecognitionRepository: FaceRecognitionRepository,
     private val userRepository: UserRepository
 ) {
-    private val SIMILARITY_THRESHOLD = 0.75f
+    private val SIMILARITY_THRESHOLD = 0.85f
 
     suspend operator fun invoke(liveVector: FloatArray): User? {
         val allUsers = userRepository.getAllUsers().first()

@@ -120,7 +120,7 @@ fun FaceRecognitionScreen(
                 is FaceRecognitionContract.State.UserRecognized -> {
                     Card(colors = CardDefaults.cardColors(containerColor = Color(0xFF4CAF50))) {
                         Text(
-                            text = "Access Granted: ${currentState.user.name}",
+                            text = "User: ${currentState.user.name}",
                             color = Color.White,
                             fontWeight = FontWeight.Bold,
                             fontSize = 20.sp,
