@@ -8,7 +8,9 @@ import com.ud23.identifi.domain.repository.FaceRecognitionRepository
 import com.ud23.identifi.domain.repository.UserRepository
 import com.ud23.identifi.domain.usecase.IdentifyFaceUseCase
 import com.ud23.identifi.presentation.orchestrator.FaceProcessingOrchestrator
+import com.ud23.identifi.presentation.viewmodel.FaceRecognitionViewModel
 import org.koin.android.ext.koin.androidContext
+import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 
 val appModule = module {
@@ -32,4 +34,8 @@ val appModule = module {
 
     // 4. Orchestrator (Singleton - we only want ONE pipeline managing the lock)
     single { FaceProcessingOrchestrator(get(), get()) }
+
+    // 5. ViewModels
+    viewModel { FaceRecognitionViewModel(get(), get()) }
+
 }
