@@ -1,4 +1,4 @@
-package com.ud23.identifi.ui.theme
+package com.ud23.identifi.presentation.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
